@@ -1,6 +1,7 @@
 import SampleClasses.RandomClass;
 import com.sun.jdi.InvocationException;
 
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,6 +10,7 @@ import java.net.URLClassLoader;
 public class Main {
     public static void main(String[] args)
     {
+        String PATH = "C://Users//elena//Desktop//Laborator12//target//classes";
         String driverName = "SampleClasses.RandomClass";
         try {
             /*
@@ -21,6 +23,9 @@ public class Main {
             Analysator inspect = new Analysator(aClass);
             inspect.extractInfo();
             inspect.invokeNoArgsMethods();
+            //hw
+            File input = new File(PATH);
+            inspect.exploreFile(input);
         }catch (ClassNotFoundException e)
         {
             e.printStackTrace();

@@ -15,4 +15,10 @@ public class RandomClass {
     {
         System.out.println("Compulsory for Lab12.");
     }
+
+    @Test
+    public void showMessage(String text)
+    {
+        System.out.println("Text in non static method: " + text);
+    }
 }
